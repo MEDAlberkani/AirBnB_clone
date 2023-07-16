@@ -4,7 +4,7 @@ for other classes
 """
 
 import uuid
-from datetime import datetime
+from datetime import datetime, time, date
 from models import storage
 
 
@@ -36,7 +36,7 @@ class BaseModel:
         """
 
         if kwargs is not None and kwargs != {}:
-            for key in kwargs.items():
+            for key in kwargs:
                 if key == "created_at":
                     self.__dict__["created_at"] = datetime.strptime(
                         kwargs["created_at"], "%Y-%m-%dT%H:%M:%S.%f")
