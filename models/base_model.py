@@ -4,7 +4,7 @@ for other classes
 """
 
 import uuid
-from datetime import datetime, time, date
+from datetime import datetime
 from models import storage
 
 
